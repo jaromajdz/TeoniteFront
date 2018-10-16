@@ -1,0 +1,36 @@
+.MainWrapper {
+  display: flex;
+}
+
+.leftSite {
+  flex: 1;
+  min-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.rigthSite {
+  flex: 2;
+}
+
+
+
+
+
+.Appheader {
+  display: flex;
+  background-color: #282c34;
+  height: 10vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 0px;
+  align-items: center;
+    justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+  margin: 0px;
+  padding: 0px
+}

@@ -1,0 +1,40 @@
+.Author {
+  display: inline-block;
+  float: left;
+  color: white;
+  padding-top:12px;
+  text-align: left;
+  width: 70%;
+  padding-left: 10px;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+.Delete {
+  display: inline-block;
+  margin-right: 3px;
+  width: 45px;
+  cursor: pointer;
+  text-align: center;
+  height: 45px;
+  float: right;
+}
+
+.AuthorB {
+  flex: 1;
+  height: 45px;
+  padding: 0px 20px 0px 20px;
+  background-color: red;
+  border-bottom: 1px solid white;
+  background-color: #040040;
+}
+
+.Load {
+   animation: colorre .3s infinite;
+}
+
+@keyframes colorre {
+    0%   {background-color: #040040;}
+    50%  {background-color: red;}
+    100% {background-color: #040040;}
+}

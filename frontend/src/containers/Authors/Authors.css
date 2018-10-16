@@ -1,0 +1,33 @@
+.Authors {
+  flex-flow: column;
+}
+
+
+.Choosen {
+  height: auto;
+}
+
+.DropDown {
+  height: 50px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.Wrap {
+  border: 1px dotted grey;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 10px;
+  width: 300px;
+}
+
+
+
+.Label {
+  position: relative;
+  top: -10px;
+  left: -20px;
+  font-size: 0.8em;
+
+
+}

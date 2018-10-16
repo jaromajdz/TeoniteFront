@@ -1,0 +1,7 @@
+.styled-select {
+   
+   height: 29px;
+   overflow: hidden;
+   width: 100%;
+   border: 1px solid black;
+}
