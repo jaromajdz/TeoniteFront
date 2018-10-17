@@ -18,6 +18,7 @@ const maninReducer = (state = initialState, action) => {
         [actionTypes.ADD_AUTHOR]: addAuthor(state, action.id),
         [actionTypes.REMOVE_AUTHOR]: removeAuthor(state, action.id),
         [actionTypes.COPY_ALL]: copyAll(state),
+        [actionTypes.CLEAR_CHOOSEN]: {authorsList: {...state.authors}, choosenAuthors: {}, statsSummary: {}},
         [actionTypes.FETCH_AUTHORS_STATUS]: {loading: true},
         [actionTypes.FETCH_AUTHORS_SUCCESS]: authorsChange(action.data),
         [actionTypes.FETCH_AUTHORS_FAIL]: {err: action.err, loading: false},

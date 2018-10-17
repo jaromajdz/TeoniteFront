@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 
-import * as actionTypes from '../../store/actionTypes.js';
-import {connect} from 'react-redux';
-
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import './DropDownList.css';
 
 
 class DropDownList extends Component {
-
 
       onChangeHandler = (event) =>{
             this.props.addAuthor(event.target.value);
@@ -41,17 +37,4 @@ class DropDownList extends Component {
       }
   }
 
-
-const mapStateToProps = state => {
-     return {
-       authors: state.authorsList
-     }
-  }
-
-const mapDispatchToProps = dispatch => {
-    return {
-      addAuthor: (id)=>dispatch({type: actionTypes.ADD_AUTHOR_AND_STAT, id: id }),
-    }
-  }
-
-export default connect(mapStateToProps, mapDispatchToProps)(DropDownList);
+export default DropDownList;

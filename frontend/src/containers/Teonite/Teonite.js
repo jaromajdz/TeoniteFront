@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actionTypes from '../../store/actionTypes.js';
 
 import StatsView from '../../components/StatsView/StatsView';
-import Authors from '../Authors/Authors';
+import Authors from '../../components/Authors/Authors';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Aux from '../../hoc/Aux/Aux';
 
@@ -17,7 +17,8 @@ import './Teonite.css';
     }
 
     render(){
-        return (
+
+      return (
            <Aux>
             <header className="Appheader">
                 <h2>Teonite blog words occurrences.</h2>
@@ -25,7 +26,7 @@ import './Teonite.css';
               <div className="MainWrapper" >
                   <div className="leftSite">
                     {this.props.loading ? <Spinner/> : <Authors/>}
-                  </div>
+                    </div>
 
                   <div className="rigthSite">
                     {this.props.loadingStat ? <Spinner/> : <StatsView/>}
@@ -38,14 +39,13 @@ import './Teonite.css';
   const mapDispatchToProps = dispatch => {
       return {
         fetchAuthors: ()=>dispatch({type: actionTypes.FETCH_AUTHORS})
-      }
+        }
     }
 
 const mapStateToProps =  state => {
   return {
     loading: state.loading,
-    loadingStat: state.loadingStat
+    loadingStat: state.loadingStat,
   }
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Teonite);

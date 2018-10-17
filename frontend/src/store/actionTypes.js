@@ -16,3 +16,5 @@ export const FETCH_STAT_FAIL = 'FETCH_STAT_FAIL';
 
 export const REMOVE_STATS = 'REMOVE_STATS';
 export const ERROR_RESET = 'ERROR_RESET';
+export const CLEAR_CHOOSEN = 'CLEAR_CHOOSEN';
+export const INIT_CLEAR = 'INIT_CLEAR';
