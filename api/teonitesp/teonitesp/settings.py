@@ -64,6 +64,12 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
 )
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
+
 ROOT_URLCONF = 'teonitesp.urls'
 
 TEMPLATES = [
