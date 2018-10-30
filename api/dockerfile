@@ -4,7 +4,6 @@ FROM python:latest
  WORKDIR /src
  ADD ./teonitesp/requirements.txt /src
  RUN pip install -r requirements.txt
- ADD . /src
 
 #Install cron
  RUN apt-get update
@@ -15,3 +14,4 @@ FROM python:latest
 # Give execution rights on the cron job
  RUN chmod 0644 /etc/cron.d/hello-cron
  RUN touch /var/log/cron.log
+ ADD . /src
