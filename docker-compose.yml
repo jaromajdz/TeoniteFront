@@ -4,17 +4,15 @@ services:
  web:
   build: ./api
   command: ["/src/start.sh"]
-  volumes:
-   - ./api:/src
   ports:
    - "8080:8080"
   depends_on:
     db:
       condition: service_healthy
-  
+
  db:
   image: postgres:9.6
-  container_name: psg02
+  container_name: psg01
   restart: always
   environment:
       POSTGRES_DB: teonite
@@ -24,17 +22,13 @@ services:
     test: ["CMD-SHELL", "pg_isready -U postgres"]
     interval: 10s
     timeout: 10s
-    retries: 3 
+    retries: 3
 
  frontend:
     build: ./frontend
-    command: ["npm", "start"]
-    volumes:
-      - ./frontend:/app/frontend
-      - node-modules:/app/frontend/node_modules
+    command: ["nginx", "-g", "daemon off;"]
     ports:
       - "3000:3000"
 
 volumes:
    node-modules:
-  
