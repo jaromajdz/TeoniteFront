@@ -8,3 +8,4 @@ This idea was wrong because using only 10 most common words it was making bad ca
 Backedn useses whole bunch of words from all posts, therefore I make all
 calculations using backend  then it fetches data and displays using React app.
 
+I'm using post method and author's Ids to fetch data.
