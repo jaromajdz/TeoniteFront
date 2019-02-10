@@ -1,11 +1,10 @@
-I wrote two apps. 
 
-First app calculated the outcome in React. 
-It was fetching10 most popular words by author and add to anothers authors.
+Backend: django rest
+Scrapes posts from teonite.com/blog and colects it in psql database
+and then provides an api endpoint with stats: occurences of the most popular words.
 
-This idea was wrong because using only 10 most common words it was making bad calculations.
+Frontend: react app displays the backend outcome
 
-Backedn useses whole bunch of words from all posts, therefore I make all
-calculations using backend  then it fetches data and displays using React app.
+* [Demo](http://ec2-13-58-111-66.us-east-2.compute.amazonaws.com:3000/)
 
-I'm using post method and author's Ids to fetch data.
+
